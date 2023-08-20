@@ -264,7 +264,7 @@ a {
     }
   }
   &--banner {
-    height: 70vh;
+    height: auto;
     background: rgba(3, 3, 3, 0.137) url(../img/shipImage.jpg);
     background-blend-mode: overlay;
     background-position: center center;
@@ -272,14 +272,14 @@ a {
     background-size: cover;
     text-align: center;
     @include menu {
-      height: 100vh;
+      height: auto;
     }
   }
   &--banner .Section-div-sectionDividerDown {
     transform: rotate(180deg);
    // top: Js alto banner - 59rem
     overflow: hidden;
-    position: absolute;
+    //position: absolute;
     left: 0;
     width: 100%;
     line-height: 0;
@@ -326,8 +326,14 @@ a {
     color: $white;
     font-weight: 700;
     font-size: large;
-    padding-bottom: 30rem;
+    padding-bottom: 90rem;
     text-shadow: $textShadow 0.1em 0.1em 0.9em;
+    @include tablet{
+      padding-bottom: 30rem;
+    }
+    @include laptop{
+      padding-bottom: 30rem;
+    }
    
   }
   &-span--banner {
@@ -357,17 +363,17 @@ a {
     transition: 0.3s;
   }
   &-div--banner {
-    padding: 90rem 0 0 0;
+    padding: 90rem 0 20rem 0;
     position: relative;
     z-index: 6;
 
     @include tablet {
       text-align: start;
-      padding-left: 70rem;
+      padding: 90rem 0rem 90rem 70rem;
     }
     @include laptop {
       text-align: start;
-      padding-left: 100rem;
+      padding: 90rem 0rem 90rem 100rem;
     }
     @include menu {
       text-align: start;

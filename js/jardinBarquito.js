@@ -98,9 +98,13 @@ function scrollTop() {
 }
 
 function isTop() {
-  window.scrollY === 0
-    ? (buttonScrollTop.style.opacity = `0`)
-    : (buttonScrollTop.style.opacity = `1`);
+  if (window.scrollY === 0){
+    buttonScrollTop.style.opacity = `0`;
+     buttonScrollTop.style.pointerEvents = 'none'}
+     else{
+    buttonScrollTop.style.opacity = `1`;
+    buttonScrollTop.style.pointerEvents = 'auto'
+  }
 }
 
 //Form / reCAPTCHA
@@ -114,8 +118,6 @@ function validateForm() {
   }
   // El CAPTCHA se ha completado correctamente, continúa con el envío del formulario.
   console.log(`CAPTCHA TRUE ${response}`);
-  //submitFormOk.classList.toggle("isActive");
-  //sectionForm.classList.toggle("isActive");
   return true;
   
 }
@@ -129,13 +131,11 @@ function submitForm(keyFormOk){
   }
 imgList.forEach((eachImg, index)=>{
   imgList[index].addEventListener(`click`,()=>{
-    lightbox.classList.add(`isActive`)
+    lightbox.classList.add(`isActive`);
     bigImage.src = imgList[index].src;
   })
 })
-closeLightbox.addEventListener(`click`,()=>{
-  lightbox.classList.remove(`isActive`);
-})
+closeLightbox.addEventListener(`click`,()=> lightbox.classList.remove(`isActive`));
 // Google Maps
 function myMap() {
   let mapProp = {
