@@ -11,21 +11,21 @@ let buttonScrollTop = document.querySelector(".Li-a--scrollTop");
 
 let servicesSection = document.querySelector("#servicesSection");
 let groupsSection = document.querySelector("#groupsSection");
-let ourGardenSection = document.querySelector("#ourGardenSection");
+let ourGartenSection = document.querySelector("#ourGartenSection");
 let humanTalentSection = document.querySelector("#humanTalentSection");
 let partnersSection = document.querySelector("#partnersSection");
 let accreditationSection = document.querySelector("#accreditationSection");
-let galerySection = document.querySelector("#galerySection");
+let gallerySection = document.querySelector("#gallerySection");
 let contactSection = document.querySelector("#contactSection");
 let captcha = document.querySelector(".Section-p--captcha");
 let sectionForm = document.querySelector(".Section-form");
 let submitFormOk =document.querySelector(".Section-div--submitFormOK");
 let sectionDivider = document.querySelector(".Section-div-sectionDividerDown");
 let banner = document.querySelector(".Section--banner");
-const imgList = document.querySelectorAll("#galery .Section-div--content img");
-const lightbox = document.querySelector("#galery .Section-div--lightbox");
-const bigImage = document.querySelector("#galery .Section-div--lightbox .bigImage");
-const closeLightbox = document.querySelector("#galery .Section-div--lightbox .close");
+const imgList = document.querySelectorAll("#gallery .Section-div--content img");
+const lightbox = document.querySelector("#gallery .Section-div--lightbox");
+const bigImage = document.querySelector("#gallery .Section-div--lightbox .bigImage");
+const closeLightbox = document.querySelector("#gallery .Section-div--lightbox .close");
 
 if (window.innerWidth < 1250) {
   shipContainer.style.clipPath = `circle( 23rem at ${
@@ -51,11 +51,11 @@ window.addEventListener("scroll", isTop);
 console.log(servicesSection);
 servicesSection.addEventListener("click", collapse);
 groupsSection.addEventListener("click", collapse);
-ourGardenSection.addEventListener("click", collapse);
+ourGartenSection.addEventListener("click", collapse);
 humanTalentSection.addEventListener("click", collapse);
 partnersSection.addEventListener("click", collapse);
 accreditationSection.addEventListener("click", collapse);
-galerySection.addEventListener("click", collapse);
+gallerySection.addEventListener("click", collapse);
 contactSection.addEventListener("click", collapse);
 document.addEventListener("DOMContentLoaded", submitForm);
 //submit.addEventListener("click", validateForm);

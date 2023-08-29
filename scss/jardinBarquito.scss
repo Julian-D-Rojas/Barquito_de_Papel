@@ -17,6 +17,7 @@
 
 $primary: #26a8ff;
 $secondary: #ff6a00;
+$gallery:#ed6503;
 $textShadow: #363535;
 $white: #f0f8ff;
 $inputBorder: #dedede;
@@ -32,7 +33,7 @@ $link: #fede9b;
 $boxShadow: rgba(128, 116, 118, 0.5);
 $grayLayer: #c5c5c59f;
 $lightGrayLayer: rgb(207, 207, 207);
-$backgroundGalery: #e0e0e0;
+$backgroundGallery: #e0e0e0;
 
 $liChild1: #feba9b;
 $liChild2: #fef49b;
@@ -257,7 +258,7 @@ a {
 .Section {
   display: flex;
   justify-content: center;
-  min-height: 300rem; //ALTURA TEMPORAL
+  min-height: 300rem; 
   @include menu {
     &[id] {
       scroll-margin-top: 80rem;
@@ -463,50 +464,14 @@ a {
     font-family: Poppins;
   }
 
-  &:nth-child(3) {
-    background-image: url(../img/background\ 2.jpg);
-    background-repeat: repeat;
+ 
+  
+  
 
-    color: $white;
-  }
-  &:nth-child(4) {
-    color: $white;
-    background: rgba(3, 3, 3, 0.336)
-      url(https://cdn.pixabay.com/photo/2017/04/05/08/18/kindergarten-2204239_1280.jpg); //TEMPORAL
-    background-blend-mode: overlay;
-    background-attachment: fixed;
-
-    height: 80vh;
-  }
-  &:nth-child(6) {
-    background-image: url(../img/background\ 1.jpg);
-    background-repeat: repeat;
-    color: $white;
-    display: none;
-  }
-  &:nth-child(5) {
-    color: $primary-70;
-  }
-  &:nth-child(8) {
-    background-color: $backgroundGalery;
-    background-repeat: repeat;
-    color: $primary-70;
-  }
-  &:nth-child(7) {
-    color: $primary-70;
-    display: none;
-  }
-  &:nth-child(9) {
-    background-image: url(../img/background\ 4.jpg);
-    background-repeat: repeat;
-    color: $primary-70;
-  }
-  &:nth-child(2) {
-    color: $primary-70;
-    background-color: $white;
-  }
 }
 #services {
+  color: $primary-70;
+  background-color: $white;
   & .Content-div--container {
     display: flex;
     flex-direction: column;
@@ -554,14 +519,102 @@ a {
     align-items: center;
   }
 }
-#groups {
-  
+#accreditation{
+  color: $primary-70;
+  display: none;
+}
+#partners {
+  background-image: url(../img/background\ 1.jpg);
+  background-repeat: repeat;
+  color: $white;
+  display: none;
+}
+#ourGarten {
+  color: $white;
+  background: rgba(3, 3, 3, 0.336)
+    url(../img/ourGarten.jpg); 
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+background-size: cover;
+& .Section-div--content{
+  margin-top: 10rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap:24rem;
+    padding: 0rem 24rem;
+    @include tablet{
+      grid-template-columns: auto auto;
+    }
+    @include laptop{
+      grid-template-columns: auto auto;
+    }
+}
+& .Section-div--ourGarten{
+  display: flex;
+  flex-direction: column;
+  background-color: #303030a8;
+  justify-content: center;
+align-items: center;
+
+}
+
+& .Section-img--ourGarten{
+  width: 150rem;
+  padding-top: 15rem;
+}
+& .Section-h3--ourGarten{
+text-align: center;
+  font-weight: 500;
+  font-size: 22rem;
+  color: $secondary;
+  font-family: Poppins;
+  padding: 10rem 0;
+}
+& .Section-button--ourGarten{
+  position: absolute;
+  bottom: 15rem;
+  width: 110rem;
+  font-size: 17rem;
+  color: $white;
+  font-weight: 600;
+  border-radius: 10rem;
+  cursor: pointer;
+  padding: 3rem;
+  border-style: solid;
+  border-width: 1px;
  
 }
-#ourGarden {
+& .Section-button--ourGarten:hover{
+  border-color: $secondary;
+color: $secondary;
 }
-#humanTalent {
+& .Section-p--ourGarten{
+  position: relative;
+ padding: 0rem 20rem 0rem 20rem;
+  height: 130rem;
+  clip-path: polygon(0 0, 100% 0, 100% 130rem, 0 130rem);
+}
+& .Section-p--ourGarten::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 95%; /* Ajusta el valor para ocultar más o menos contenido */
+  //background: linear-gradient(transparent, #303030); /* Sombra que oculta el contenido */
+  background: linear-gradient(0deg, #303030 25%, rgba(253,187,45,0) 100%);
+}
+& .Section-div--pcontent{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+#humanTalent{
   & {
+    color: $aquaTitle;
     background: $lightGrayLayer url(../img/trianglesBackground.png);
     background-blend-mode: overlay;
     background-size: cover;
@@ -643,7 +696,106 @@ a {
     font-size: 12rem;
   }
 }
-#galery{
+#groups{
+  & .Section-div--container{
+    padding: 0;
+    max-width: 100%;
+    
+    & .Section-div--textContainer{
+      text-align: center;
+      padding: 50rem 8rem;
+      @include tablet {
+        width: 50%;
+      }
+      @include laptop {
+        width: 50%;
+      }
+        @include gallery {
+          width: 50%;
+        
+      }
+    }
+    & h3{
+      font-size: 36rem;
+      font-family: emojis;
+      color: $primary-70;
+      font-weight: 700;
+    }
+    & p{
+      font-size: 20rem;
+      color: $pinkTitle;
+      font-family: emojis;
+    }
+  }
+  & .Section-div--content{
+padding: 0;
+line-height: normal;
+@include gallery{
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 50% 50%;
+  
+}
+  }
+  & .Section-figure--groups{
+
+    @include tablet {
+      width: 50%;
+    }
+    @include laptop {
+      width: 50%;
+    }
+      @include gallery {
+        width: 50%;
+    }
+  }
+  & .Section-div--groups{
+    @include tablet {
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+justify-content: space-around;
+    }
+    @include laptop {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @include gallery {
+    flex-direction: row;
+    }
+  }
+  & .Section-div--groups:nth-child(odd){
+    @include tablet {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+    }
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  & .Section-div--groups:nth-child(3){
+    @include gallery {
+  flex-direction: row-reverse;
+  }}
+  & .Section-div--groups:nth-child(4){
+    @include gallery {
+    flex-direction: row-reverse;
+    }}
+}
+
+#gallery{
+  
+    background-color: $backgroundGallery;
+    
+    color: $gallery;
+  
   & .Section-div--content{
     margin-top: 10rem;
     display: grid;
@@ -718,11 +870,17 @@ transform: scale(.95);
 & .Section-div--lightbox .bigImage{
 width: 90%;
 max-width: 900rem;
-height: 70vh;
+//height: 70vh;
 background-color: #26a8ff;
 box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
 }
 }
+#contact{
+  background-image: url(../img/background\ 4.jpg);
+  background-repeat: repeat;
+  color: $primary-70;
+}
+ 
 .Li {
   &-a--scrollTop {
     opacity: 1;
