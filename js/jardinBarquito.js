@@ -26,6 +26,13 @@ const imgList = document.querySelectorAll("#gallery .Section-div--content img");
 const lightbox = document.querySelector("#gallery .Section-div--lightbox");
 const bigImage = document.querySelector("#gallery .Section-div--lightbox .bigImage");
 const closeLightbox = document.querySelector("#gallery .Section-div--lightbox .close");
+const $closeLightbox = document.querySelector("#ourGarten .Section-div--lightbox .close");
+let $btnWhoWeAre = document.getElementById('whoWeAre');
+let $btnMision = document.getElementById('mision');
+let $btnVision = document.getElementById('vision');
+let $btnLearningEnviroment = document.getElementById('learningEnviroment');
+let $containerOurGartenInfo = document.querySelector('#ourGarten .Section-div--lightbox')
+let $divOurGartenInfo = document.querySelector("#ourGarten .modalOurGartenInfo");
 
 if (window.innerWidth < 1250) {
   shipContainer.style.clipPath = `circle( 23rem at ${
@@ -58,6 +65,11 @@ accreditationSection.addEventListener("click", collapse);
 gallerySection.addEventListener("click", collapse);
 contactSection.addEventListener("click", collapse);
 document.addEventListener("DOMContentLoaded", submitForm);
+$btnWhoWeAre.addEventListener("click", modalInfo1);
+$btnMision.addEventListener("click", modalInfo2);
+$btnVision.addEventListener("click", modalInfo3);
+$btnLearningEnviroment.addEventListener("click", modalInfo4);
+
 //submit.addEventListener("click", validateForm);
 
 function collapse() {
@@ -106,6 +118,39 @@ function isTop() {
     buttonScrollTop.style.pointerEvents = 'auto'
   }
 }
+function modalInfo1(){
+  console.log("Modal")
+  $divOurGartenInfo.innerHTML = `<img src="./img/OurGarten/quienesSomos.png" alt="Quienes Somos" class="Section-img--ourGarten">
+  <h3 class="Section-h3--ourGarten">Quienes somos</h3>
+  <div class="bigText">
+  <p>El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, es un lugar de oportunidad para que los niños y niñas de primera infancia reciban la atención y orientación en sus procesos comunicativos, cognitivos, sociales, artísticos y corporales de manera adecuada, afectiva, lúdica y personalizada.</p>
+ `
+  $containerOurGartenInfo.classList.add(`isActive`);
+}
+function modalInfo2(){
+  console.log("Modal")
+  $divOurGartenInfo.innerHTML = `<img src="./img/OurGarten/mision.png" alt="Misión" class="Section-img--ourGarten">
+  <h3 class="Section-h3--ourGarten">Misión</h3>
+  <div class="bigText">
+  <p>El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, está comprometido con el desarrollo de los niños y las niñas en sus dimensiones, teniendo en cuenta las características individuales; fundamentando la labor en la lúdica y el acercamiento afectivo como pilares en la realización de todas las actividades y empleando aulas especializadas que favorecen ambientes de aprendizaje.</p>`
+  $containerOurGartenInfo.classList.add(`isActive`);
+}
+function modalInfo3(){
+  console.log("Modal")
+  $divOurGartenInfo.innerHTML = `<img src="./img/OurGarten/vision.png" alt="Visión" class="Section-img--ourGarten">
+  <h3 class="Section-h3--ourGarten">Visión</h3>
+  <div class="bigText">
+  <p ">El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, será reconocido como una institución educativa que potencia en los niños y niñas destrezas, habilidades y favorece procesos cognitivos, sociales, artísticos, corporales y comunicativos en español e inglés en ambientes de aprendizaje afectivos y lúdicos, pertinentes para su desarrollo.</p>`
+  $containerOurGartenInfo.classList.add(`isActive`);
+}
+function modalInfo4(){
+  console.log("Modal")
+  $divOurGartenInfo.innerHTML = `<img src="./img/OurGarten/espacios.png" alt="Ambientes de Aprendizaje" class="Section-img--ourGarten">
+  <h3 class="Section-h3--ourGarten">Ambientes de Aprendizaje</h3>
+  <div class="bigText">
+  <p >El desarrollo humano es la integración de conocimientos, de maneras de ser, de sentir, de actuar, que se suscitan al interactuar consigo mismo, con sus padres, con sus pares, docentes y con los objetos del medio como producto de la experiencia vivida. Como ser humano, el niño se desarrolla como totalidad, tanto su organismo biológicamente organizado, como sus potencialidades de aprendizaje y desenvolvimiento funcionan en un sistema compuesto de múltiples dimensiones: corporal, cognitiva, comunicativa y personal social. El funcionamiento particular de cada una, determina el desarrollo y actividad posible del niño en sus distintas etapas. Desde un punto de vista integral, la evolución del niño se realiza en varias dimensiones y procesos a la vez, estos desarrollos no son independientes sino complementarios. En nuestro jardín favorecemos estos desarrollos en ambientes de aprendizaje en las diferentes aulas enfocadas a cada dimensión.</p> `
+  $containerOurGartenInfo.classList.add(`isActive`);
+}
 
 //Form / reCAPTCHA
 function validateForm() {
@@ -136,6 +181,7 @@ imgList.forEach((eachImg, index)=>{
   })
 })
 closeLightbox.addEventListener(`click`,()=> lightbox.classList.remove(`isActive`));
+$closeLightbox.addEventListener(`click`,()=> $containerOurGartenInfo.classList.remove(`isActive`));
 // Google Maps
 function myMap() {
   let mapProp = {

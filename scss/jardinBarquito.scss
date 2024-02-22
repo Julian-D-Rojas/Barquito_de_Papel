@@ -418,6 +418,7 @@ a {
   }
   &-div--captchaContainer {
     margin: 5rem 0rem;
+    min-height: 100rem;
   }
   &-p--captcha {
     color: rgb(221, 17, 17);
@@ -612,6 +613,71 @@ color: $secondary;
   flex-direction: column;
   justify-content: center;
 }
+
+& .Section-div--lightbox{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow:  column;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease;
+  z-index: 12;
+  }
+  & .Section-div--lightbox.isActive{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close{
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all .5s ease;
+  }
+  & .Section-div--lightbox .close:hover{
+  transform: scale(.95);
+  }
+  & .Section-div--lightbox .close:active{
+    transform: scale(1.1);
+    }
+  & .Section-div--lightbox .ourGartenInfo{
+  width: 90%;
+  max-width: 900rem;
+  //height: 70vh;
+  background-color: #26a8ff;
+  box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+  & .Section-div--lightbox .close{
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all .5s ease;
+  }
+  & .Section-div--lightbox .close:hover{
+  transform: scale(.95);
+  }
+  & .Section-div--lightbox .close:active{
+    transform: scale(1.1);
+    }
+
+& .modalOurGartenInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+& .bigText{
+  padding: 0 24rem;
+  max-width: 500rem;
+}
+
 }
 #humanTalent{
   & {
@@ -880,6 +946,22 @@ box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
   background-image: url(../img/background\ 4.jpg);
   background-repeat: repeat;
   color: $primary-70;
+
+  & .div-Section--loader{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  & .div-Section--loader img{
+    width:100rem
+  }
+  & .Section-p--captcha{
+    padding: 0 11rem;
+  }
+  & .none{
+opacity: 0;
+display: none;
+  }
 }
  
 .Li {

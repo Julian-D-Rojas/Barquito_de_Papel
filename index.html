@@ -56,7 +56,7 @@
                                 d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                         </svg>
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=573223640232&text&app_absent=0"
+                    <a href="https://api.whatsapp.com/send/?phone=573123018083&text&app_absent=0"
                         class="Header-a--social" target="_blank">
                         <svg class="Header-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                             viewBox="0 0 16 16">
@@ -192,32 +192,32 @@
                         <h3 class="Section-h3--ourGarten">Quienes somos</h3>
                         <div class="Section-div--pcontent">
                         <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, es un lugar de oportunidad para que los niños y niñas de primera infancia reciban la atención y orientación en sus procesos comunicativos, cognitivos, sociales, artísticos y corporales de manera adecuada, afectiva, lúdica y personalizada.</p>
-                        <button class="Section-button--ourGarten">Ver más</button></div>
+                        <button id="whoWeAre" class="Section-button--ourGarten">Ver más</button></div>
                     </div>
                     <div class="Section-div--ourGarten">
                         <img src="./img/OurGarten/mision.png" alt="Misión" class="Section-img--ourGarten">
                         <h3 class="Section-h3--ourGarten">Misión</h3>
                         <div class="Section-div--pcontent">
                         <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, está comprometido con el desarrollo de los niños y las niñas en sus dimensiones, teniendo en cuenta las características individuales; fundamentando la labor en la lúdica y el acercamiento afectivo como pilares en la realización de todas las actividades y empleando aulas especializadas que favorecen ambientes de aprendizaje.</p>
-                        <button class="Section-button--ourGarten">Ver más</button></div>
+                        <button id="mision" class="Section-button--ourGarten">Ver más</button></div>
                     </div>
                     <div class="Section-div--ourGarten">
                         <img src="./img/OurGarten/vision.png" alt="Visión" class="Section-img--ourGarten">
                         <h3 class="Section-h3--ourGarten">Visión</h3>
                         <div class="Section-div--pcontent">
                         <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del desarrollo y del aprendizaje, será reconocido como una institución educativa que potencia en los niños y niñas destrezas, habilidades y favorece procesos cognitivos, sociales, artísticos, corporales y comunicativos en español e inglés en ambientes de aprendizaje afectivos y lúdicos, pertinentes para su desarrollo.</p>
-                        <button class="Section-button--ourGarten">Ver más</button></div>
+                        <button id="vision" class="Section-button--ourGarten">Ver más</button></div>
                     </div>
                     <div class="Section-div--ourGarten">
                         <img src="./img/OurGarten/espacios.png" alt="Ambientes de Aprendizaje" class="Section-img--ourGarten">
                         <h3 class="Section-h3--ourGarten">Ambientes de Aprendizaje</h3>
                         <div class="Section-div--pcontent">
                         <p class="Section-p--ourGarten">El desarrollo humano es la integración de conocimientos, de maneras de ser, de sentir, de actuar, que se suscitan al interactuar consigo mismo, con sus padres, con sus pares, docentes y con los objetos del medio como producto de la experiencia vivida. Como ser humano, el niño se desarrolla como totalidad, tanto su organismo biológicamente organizado, como sus potencialidades de aprendizaje y desenvolvimiento funcionan en un sistema compuesto de múltiples dimensiones: corporal, cognitiva, comunicativa y personal social. El funcionamiento particular de cada una, determina el desarrollo y actividad posible del niño en sus distintas etapas. Desde un punto de vista integral, la evolución del niño se realiza en varias dimensiones y procesos a la vez, estos desarrollos no son independientes sino complementarios. En nuestro jardín favorecemos estos desarrollos en ambientes de aprendizaje en las diferentes aulas enfocadas a cada dimensión.</p>
-                        <button class="Section-button--ourGarten">Ver más</button></div>
+                        <button id="learningEnviroment" class="Section-button--ourGarten">Ver más</button></div>
                     </div> 
 
                 </div>
-                <!-- Modal!!
+                <!-- Modal!!-->
                 <div class="Section-div--lightbox">
                     <button class="close">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
@@ -225,10 +225,10 @@
                                 d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
                         </svg>
                     </button>
-                    <img class="bigImage" alt="Galería">
-                    <p class="Section-p--lightbox"></p>
+                    <div class="modalOurGartenInfo"></div>
                 </div>
-                 -->
+                 
+
             </div>
         </section>
         <section class="Section" id="groups">
@@ -473,7 +473,7 @@
                     <form class="Section-form" method="post" action="phpmailer.php" onsubmit="return validateForm()">
                         <label for="name">
                             <span>Nombre:</span>
-                            <input type="text" name="name" id="name" autocomplete="name" required>
+                            <input type="text" name="name" id="name" autocomplete="name" title="Nombre sólo acepta letras, espacios en blanco y máximo 45 caracteres" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,45}$" required>
                         </label>
                         <label for="email">
                             <span>Correo Electrónico:</span>
@@ -481,7 +481,7 @@
                         </label>
                         <label for="phone">
                             <span>Número Telefónico:</span>
-                            <input type="tel" name="phone" id="phone" autocomplete="tel" required>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel" title="Este campo sólo acepta números" pattern="^[0-9]{1,20}$" required>
                         </label>
                         <label for="message">
                             <span>Mensaje:</span>
@@ -490,7 +490,10 @@
                         </label>
                         <div class="Section-div--captchaContainer">
                             <div class="g-recaptcha" data-sitekey="6LdSurAmAAAAAD1ShfmSmyUzI4uHQQqIijBa2mzo"></div>
-                            <p class="Section-p--captcha">Llena el código reCAPTCHA</p>
+                            <p class="Section-p--captcha">  Llena el código reCAPTCHA</p>
+                            <div class="div-Section--loader none">
+                                <img src="./img/tail-spin.svg" alt="Cargando">
+                            </div>
                         </div>
 
                         <input class="Form-input--submit" type="submit" value="Enviar">
@@ -513,7 +516,7 @@
                         <p class="Footer-p">Los sábados de 9:00a.m. a 2:00p.m.</p>
                         <p class="Footer-p">Con cita previa.</p>
                         <h5 class="Footer-h5">MAYOR INFORMACIÓN</h4>
-                            <p class="Footer-p">Celular: 322 364 0232</p>
+                            <p class="Footer-p">Celular: 312 301 8083</p>
                             <p class="Footer-p">Teléfono: (601) 659 7602</p>
                             <p class="Footer-p">Correo Electrónico: <a class="Footer-a--mail"
                                     href="http://RedesBarquito@gmail.com" target="_blank">RedesBarquito@gmail.com</a>
@@ -527,7 +530,7 @@
                                     d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                             </svg>
                         </a>
-                        <a href="https://api.whatsapp.com/send/?phone=573223640232&text&app_absent=0"
+                        <a href="https://api.whatsapp.com/send/?phone=573123018083&text&app_absent=0"
                             class="Footer-a--social" target="_blank">
                             <svg class="Footer-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                 viewBox="0 0 16 16">
@@ -556,7 +559,7 @@
                 <a href="#" about="_blank" class="Footer-a--termsConditions">Términos, Condiciones & Políticas de
                     Privacidad</a>
             </p>
-            <p class="Footer-p--copyright"><small>&copy; Copyright 2023 - Jardín Infantil Barquito de Papel</small></p>
+            <p class="Footer-p--copyright"><small>&copy; Copyright 2024 - Jardín Infantil Barquito de Papel</small></p>
 
         </div>
     </footer>
