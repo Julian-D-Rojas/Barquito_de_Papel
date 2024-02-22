@@ -17,7 +17,7 @@
 
 $primary: #26a8ff;
 $secondary: #ff6a00;
-$gallery:#ed6503;
+$gallery: #ed6503;
 $textShadow: #363535;
 $white: #f0f8ff;
 $inputBorder: #dedede;
@@ -259,7 +259,7 @@ a {
 .Section {
   display: flex;
   justify-content: center;
-  min-height: 300rem; 
+  min-height: 300rem;
   @include menu {
     &[id] {
       scroll-margin-top: 80rem;
@@ -279,18 +279,17 @@ a {
   }
   &--banner .Section-div-sectionDividerDown {
     transform: rotate(180deg);
-   // top: Js alto banner - 59rem
+    // top: Js alto banner - 59rem
     overflow: hidden;
     //position: absolute;
     left: 0;
     width: 100%;
     line-height: 0;
     direction: ltr;
-    color: $white; 
+    color: $white;
     @include menu {
       bottom: -1px;
     }
- 
   }
   &--banner .Section-div-sectionDividerDown svg {
     height: 60rem;
@@ -302,7 +301,7 @@ a {
     transform: translateX(-50%);
   }
   // &--banner .Section-div-sectionDividerUp {
-  
+
   //   top: 29vh;
   //   overflow: hidden;
   //   position: absolute;
@@ -310,13 +309,11 @@ a {
   //   width: 100%;
   //   line-height: 0;
   //   direction: ltr;
-  //   color: $white; 
+  //   color: $white;
   //   @include menu {
   //     top: -1px;
   //   }
   //}
-
- 
 
   &-h2--banner {
     padding-top: 70rem;
@@ -330,19 +327,17 @@ a {
     font-size: large;
     padding-bottom: 90rem;
     text-shadow: $textShadow 0.1em 0.1em 0.9em;
-    @include tablet{
+    @include tablet {
       padding-bottom: 30rem;
     }
-    @include laptop{
+    @include laptop {
       padding-bottom: 30rem;
     }
-   
   }
   &-span--banner {
     font-size: 39rem;
     font-family: Poppins;
     font-weight: 100;
-    
   }
   // &-button--banner:hover {
   // }
@@ -465,11 +460,6 @@ a {
     font-weight: 800;
     font-family: Poppins;
   }
-
- 
-  
-  
-
 }
 #services {
   color: $primary-70;
@@ -489,11 +479,11 @@ a {
     flex-direction: column;
     align-items: center;
     padding: 20rem;
-    @include tablet{
-    width: 33%;
+    @include tablet {
+      width: 33%;
     }
-    @include laptop{
-    width: 33%;
+    @include laptop {
+      width: 33%;
     }
   }
   & .Content-div--content h3 {
@@ -521,7 +511,7 @@ a {
     align-items: center;
   }
 }
-#accreditation{
+#accreditation {
   color: $primary-70;
   display: none;
 }
@@ -533,153 +523,149 @@ a {
 }
 #ourGarten {
   color: $white;
-  background: rgba(3, 3, 3, 0.336)
-    url(../img/ourGarten.jpg); 
+  background: rgba(3, 3, 3, 0.336) url(../img/ourGarten.jpg);
   background-blend-mode: overlay;
   background-attachment: fixed;
-background-size: cover;
-& .Section-div--content{
-  margin-top: 10rem;
+  background-size: cover;
+  & .Section-div--content {
+    margin-top: 10rem;
     display: grid;
     grid-template-columns: auto;
-    grid-gap:24rem;
+    grid-gap: 24rem;
     padding: 0rem 24rem;
-    @include tablet{
+    @include tablet {
       grid-template-columns: auto auto;
     }
-    @include laptop{
+    @include laptop {
       grid-template-columns: auto auto;
     }
-}
-& .Section-div--ourGarten{
-  display: flex;
-  flex-direction: column;
-  background-color: #303030a8;
-  justify-content: center;
-align-items: center;
-
-}
-
-& .Section-img--ourGarten{
-  width: 150rem;
-  padding-top: 15rem;
-}
-& .Section-h3--ourGarten{
-text-align: center;
-  font-weight: 500;
-  font-size: 22rem;
-  color: $secondary;
-  font-family: Poppins;
-  padding: 10rem 0;
-}
-& .Section-button--ourGarten{
-  position: absolute;
-  bottom: 15rem;
-  width: 110rem;
-  font-size: 17rem;
-  color: $white;
-  font-weight: 600;
-  border-radius: 10rem;
-  cursor: pointer;
-  padding: 3rem;
-  border-style: solid;
-  border-width: 1px;
- 
-}
-& .Section-button--ourGarten:hover{
-  border-color: $secondary;
-color: $secondary;
-}
-& .Section-p--ourGarten{
-  position: relative;
- padding: 0rem 20rem 0rem 20rem;
-  height: 130rem;
-  clip-path: polygon(0 0, 100% 0, 100% 130rem, 0 130rem);
-}
-& .Section-p--ourGarten::before{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 95%; /* Ajusta el valor para ocultar más o menos contenido */
-  //background: linear-gradient(transparent, #303030); /* Sombra que oculta el contenido */
-  background: linear-gradient(0deg, #303030 25%, rgba(253,187,45,0) 100%);
-}
-& .Section-div--pcontent{
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-& .Section-div--lightbox{
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10rem);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-flow:  column;
-  justify-content: center;
-  align-items: center;
-  gap: 15rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: all .5s ease;
-  z-index: 12;
   }
-  & .Section-div--lightbox.isActive{
+  & .Section-div--ourGarten {
+    display: flex;
+    flex-direction: column;
+    background-color: #303030a8;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .Section-img--ourGarten {
+    width: 150rem;
+    padding-top: 15rem;
+  }
+  & .Section-h3--ourGarten {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22rem;
+    color: $secondary;
+    font-family: Poppins;
+    padding: 10rem 0;
+  }
+  & .Section-button--ourGarten {
+    position: absolute;
+    bottom: 15rem;
+    width: 110rem;
+    font-size: 17rem;
+    color: $white;
+    font-weight: 600;
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: 3rem;
+    border-style: solid;
+    border-width: 1px;
+  }
+  & .Section-button--ourGarten:hover {
+    border-color: $secondary;
+    color: $secondary;
+  }
+  & .Section-p--ourGarten {
+    position: relative;
+    padding: 0rem 20rem 0rem 20rem;
+    height: 130rem;
+    clip-path: polygon(0 0, 100% 0, 100% 130rem, 0 130rem);
+  }
+  & .Section-p--ourGarten::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95%; /* Ajusta el valor para ocultar más o menos contenido */
+    //background: linear-gradient(transparent, #303030); /* Sombra que oculta el contenido */
+    background: linear-gradient(0deg, #303030 25%, rgba(253, 187, 45, 0) 100%);
+  }
+  & .Section-div--pcontent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 12;
+  }
+  & .Section-div--lightbox.isActive {
     opacity: 1;
     pointer-events: auto;
   }
-  & .Section-div--lightbox .close{
+  & .Section-div--lightbox .close {
     width: 30rem;
     cursor: pointer;
     color: $white;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
-  & .Section-div--lightbox .close:hover{
-  transform: scale(.95);
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
   }
-  & .Section-div--lightbox .close:active{
+  & .Section-div--lightbox .close:active {
     transform: scale(1.1);
-    }
-  & .Section-div--lightbox .ourGartenInfo{
-  width: 90%;
-  max-width: 900rem;
-  //height: 70vh;
-  background-color: #26a8ff;
-  box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
   }
-  & .Section-div--lightbox .close{
+  & .Section-div--lightbox .ourGartenInfo {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+  & .Section-div--lightbox .close {
     width: 30rem;
     cursor: pointer;
     color: $white;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
-  & .Section-div--lightbox .close:hover{
-  transform: scale(.95);
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
   }
-  & .Section-div--lightbox .close:active{
+  & .Section-div--lightbox .close:active {
     transform: scale(1.1);
-    }
+  }
 
-& .modalOurGartenInfo{
-  display: flex;
-  flex-direction: column;
-  align-items: center
+  & .modalOurGartenInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & .bigText {
+    padding: 0 24rem;
+    max-width: 500rem;
+  }
 }
-& .bigText{
-  padding: 0 24rem;
-  max-width: 500rem;
-}
-
-}
-#humanTalent{
+#humanTalent {
   & {
     color: $aquaTitle;
     background: $lightGrayLayer url(../img/trianglesBackground.png);
@@ -763,12 +749,12 @@ color: $secondary;
     font-size: 12rem;
   }
 }
-#groups{
-  & .Section-div--container{
+#groups {
+  & .Section-div--container {
     padding: 0;
     max-width: 100%;
-    
-    & .Section-div--textContainer{
+
+    & .Section-div--textContainer {
       text-align: center;
       padding: 50rem 8rem;
       @include tablet {
@@ -777,51 +763,48 @@ color: $secondary;
       @include laptop {
         width: 50%;
       }
-        @include gallery {
-          width: 50%;
-        
+      @include gallery {
+        width: 50%;
       }
     }
-    & h3{
+    & h3 {
       font-size: 36rem;
       font-family: emojis;
       color: $primary-70;
       font-weight: 700;
     }
-    & p{
+    & p {
       font-size: 20rem;
       color: $pinkTitle;
       font-family: emojis;
     }
   }
-  & .Section-div--content{
-padding: 0;
-line-height: normal;
-@include gallery{
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: 50% 50%;
-  
-}
+  & .Section-div--content {
+    padding: 0;
+    line-height: normal;
+    @include gallery {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 50% 50%;
+    }
   }
-  & .Section-figure--groups{
-
+  & .Section-figure--groups {
     @include tablet {
       width: 50%;
     }
     @include laptop {
       width: 50%;
     }
-      @include gallery {
-        width: 50%;
+    @include gallery {
+      width: 50%;
     }
   }
-  & .Section-div--groups{
+  & .Section-div--groups {
     @include tablet {
-display: flex;
-flex-direction: row-reverse;
-align-items: center;
-justify-content: space-around;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
     }
     @include laptop {
       display: flex;
@@ -830,15 +813,15 @@ justify-content: space-around;
       justify-content: space-around;
     }
     @include gallery {
-    flex-direction: row;
+      flex-direction: row;
     }
   }
-  & .Section-div--groups:nth-child(odd){
+  & .Section-div--groups:nth-child(odd) {
     @include tablet {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
     }
     @include laptop {
       display: flex;
@@ -847,123 +830,120 @@ justify-content: space-around;
       justify-content: space-around;
     }
   }
-  & .Section-div--groups:nth-child(3){
+  & .Section-div--groups:nth-child(3) {
     @include gallery {
-  flex-direction: row-reverse;
-  }}
-  & .Section-div--groups:nth-child(4){
+      flex-direction: row-reverse;
+    }
+  }
+  & .Section-div--groups:nth-child(4) {
     @include gallery {
-    flex-direction: row-reverse;
-    }}
+      flex-direction: row-reverse;
+    }
+  }
 }
 
-#gallery{
-  
-    background-color: $backgroundGallery;
-    
-    color: $gallery;
-  
-  & .Section-div--content{
+#gallery {
+  background-color: $backgroundGallery;
+
+  color: $gallery;
+
+  & .Section-div--content {
     margin-top: 10rem;
     display: grid;
     grid-template-columns: auto;
-    grid-gap:24rem;
+    grid-gap: 24rem;
     padding: 0rem 24rem;
-    @include tablet{
+    @include tablet {
       grid-template-columns: auto auto;
     }
-    @include laptop{
+    @include laptop {
       grid-template-columns: auto auto auto auto;
     }
-    
   }
-  & .Section-div--container{
-   
+  & .Section-div--container {
     @include tablet {
-    max-width: none;
-  }
+      max-width: none;
+    }
     @include laptop {
-    max-width: none;
+      max-width: none;
+    }
   }
-}
 
-  & .Section-div--content img{
-    box-shadow:  15rem 15rem 30rem #bababa,
-             -15rem -15rem 30rem #ffffff;
-             cursor: pointer;
-             transition: all .5s ease;
-            }
-  & .Section-div--content img:hover{
-transform: scale(.95);
-
+  & .Section-div--content img {
+    box-shadow: 15rem 15rem 30rem #bababa, -15rem -15rem 30rem #ffffff;
+    cursor: pointer;
+    transition: all 0.5s ease;
   }
-  & .Section-div--content img:Active{
-transform: scale(1.03);
-}
-& .Section-div--lightbox{
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.4);
-backdrop-filter: blur(10rem);
-position: fixed;
-top: 0;
-left: 0;
-display: flex;
-flex-flow:  column;
-justify-content: center;
-align-items: center;
-gap: 15rem;
-opacity: 0;
-pointer-events: none;
-transition: all .5s ease;
-z-index: 11;
-}
-& .Section-div--lightbox.isActive{
-  opacity: 1;
-  pointer-events: auto;
-}
-& .Section-div--lightbox .close{
-  width: 30rem;
-  cursor: pointer;
-  color: $white;
-  transition: all .5s ease;
-}
-& .Section-div--lightbox .close:hover{
-transform: scale(.95);
-}
-& .Section-div--lightbox .close:active{
-  transform: scale(1.1);
+  & .Section-div--content img:hover {
+    transform: scale(0.95);
   }
-& .Section-div--lightbox .bigImage{
-width: 90%;
-max-width: 900rem;
-//height: 70vh;
-background-color: #26a8ff;
-box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  & .Section-div--content img:active {
+    transform: scale(1.03);
+  }
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 11;
+  }
+  & .Section-div--lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+  & .Section-div--lightbox .bigImage {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
 }
-}
-#contact{
+#contact {
   background-image: url(../img/background\ 4.jpg);
   background-repeat: repeat;
   color: $primary-70;
 
-  & .div-Section--loader{
+  & .div-Section--loader {
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
-  & .div-Section--loader img{
-    width:100rem
+  & .div-Section--loader img {
+    width: 100rem;
   }
-  & .Section-p--captcha{
+  & .Section-p--captcha {
     padding: 0 11rem;
   }
-  & .none{
-opacity: 0;
-display: none;
+  & .none {
+    opacity: 0;
+    display: none;
   }
 }
- 
+
 .Li {
   &-a--scrollTop {
     opacity: 1;
