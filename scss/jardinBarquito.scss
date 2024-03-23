@@ -443,6 +443,11 @@ a {
   }
   &-div--submitFormOK {
     display: none;
+    
+  }
+  &-div--submitFormOK p{
+    font-weight: 600;
+    text-align: center;
   }
   &-div--submitFormOK.isActive {
     display: block;
@@ -717,6 +722,9 @@ a {
   & .Content-figure:nth-child(3) {
     color: $aquaTitle;
   }
+  & .Content-figure:nth-child(4) {
+    color: $pinkTitle;
+  }
   & .Content-figure {
     display: flex;
     flex-direction: column;
@@ -870,12 +878,21 @@ a {
   }
 
   & .Section-div--content img {
+    
     box-shadow: 15rem 15rem 30rem #bababa, -15rem -15rem 30rem #ffffff;
-    cursor: pointer;
     transition: all 0.5s ease;
+    pointer-events: none;
+    @include tablet {cursor: pointer;
+      pointer-events: auto;
+    }
+    @include laptop {cursor: pointer;
+      pointer-events: auto;
+    }
   }
   & .Section-div--content img:hover {
-    transform: scale(0.95);
+    @include tablet {transform: scale(0.95)}
+    @include laptop {transform: scale(0.95)}
+    
   }
   & .Section-div--content img:active {
     transform: scale(1.03);
@@ -933,7 +950,7 @@ a {
     justify-content: center;
   }
   & .div-Section--loader img {
-    width: 100rem;
+    width: 70rem;
   }
   & .Section-p--captcha {
     padding: 0 11rem;
@@ -971,12 +988,28 @@ a {
     height: 30rem;
   }
 }
-
+.scrollBar{
+  max-height: 330px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: darkgray lightgray;
+}
 .Footer {
   & {
     background-color: $primary-80;
   }
-
+  & .bigText {
+    padding: 0 24rem;
+    max-width: 500rem;
+  }
+  & .Section-h3--ourGarten {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22rem;
+    color: $secondary;
+    font-family: Poppins;
+    padding: 10rem 0;
+  }
   &-h4 {
     font-size: 23rem;
     text-align: center;
@@ -1068,6 +1101,60 @@ a {
   &-p--termsConditions {
     text-align: center;
     font-size: 12rem;
+    cursor: pointer;
+  }
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 12;
+  }
+  & .Section-div--lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+  & .Section-div--lightbox .ourGartenInfo {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
   }
 }
 
