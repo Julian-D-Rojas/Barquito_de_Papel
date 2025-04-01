@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Jardin Infantil Barquito de Papel, la travesía del desarrollo del aprendizaje">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/jardinBarquito.css">
+    <!-- <link rel="stylesheet" href="./css/MediaScreen320px.css" media="screen and (min-width:320px)"> -->
+    <link rel="icon" href="./img/icons/favicon.png">
+    <title>Jardín Infantil Barquito de Papel</title>
+</head>
+
+<body class="Body">
+    <header class="Header">
+        <div class="Header-div--container">
+            <div class="Header-div--menu">
+                <h1><a href="#top" class="Header-a">Jardín Infantil <br> Barquito de Papel</a></h1>
+                <button class="Header-button">
+                    <svg class="Header-svg Header-svg--ship" width="203" viewBox="0 0 203 90"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M101.645 1L79.7097 38.2815L1 30.5681L30.6774 79.4197C39.0607 90.6155 46.8101 91.0244 59.0645 79.4197C60.3548 90.9899 75.7461 91.7229 87.4516 76.8486C90.0323 92.2754 106.107 93.3515 118.419 78.1342C121 92.2754 138.954 90.9937 149.387 76.8486C149.387 87.1331 163.661 89.4586 170.032 83.2764C176.403 77.0942 201 51.1372 201 51.1372L128.742 45.9949L101.645 1Z"
+                            stroke="none" stroke-opacity="0.01" />
+                        >
+                    </svg>
+                    <svg class="Header-svg Header-svg--x" xmlns="http://www.w3.org/2000/svg" width="203"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="Header-nav">
+                <ul class="Header-ul">
+                    <li class="Header-li"><a href="#services" id="servicesSection" class="Header-a--nav">Servicios</a>
+                    </li>
+                    <li class="Header-li"><a href="#ourGarten" id="ourGartenSection" class="Header-a--nav">Nuestro
+                            Jardín</a></li>
+                    <li class="Header-li"><a href="#groups" id="groupsSection" class="Header-a--nav">Grupos</a></li>
+                    <li class="Header-li"><a href="#humanTalent" id="humanTalentSection" class="Header-a--nav">Talento
+                            Humano</a></li>
+                    <li class="Header-li"><a href="#partners" id="partnersSection" class="Header-a--nav">Convenios</a>
+                    </li>
+                    <li class="Header-li"><a href="#accreditation" id="accreditationSection"
+                            class="Header-a--nav">Acreditación</a></li>
+                    <li class="Header-li"><a href="#gallery" id="gallerySection" class="Header-a--nav">Galería</a></li>
+                    <li class="Header-li"><a href="#contact" id="contactSection" class="Header-a--nav">Contáctenos</a>
+                    </li>
+                </ul>
+                <div class="Header-div--social">
+                    <a href="#" 
+                    class="Header-a--social" target="_blank">
+                        <svg class="Header-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="Header-a--social" target="_blank">
+                        <svg class="Header-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="Header-a--social" target="_blank">
+                        <svg class="Header-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="Header-a--social" target="_blank">
+                        <svg class="Header-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg>
+                    </a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <main class="Main">
+        <section class="Section--banner">
+            <h2 class="Section-h2--banner"><a class="Header-a">Jardín Infantil <br> Barquito de Papel</a></h2>
+            <div class="Section-div--banner">
+                <p class="Section-p--banner"><span class="Section-span--banner">Barquito de Papel</span>
+                    <br>La travesía del desarrollo del Aprendizaje
+                </p>
+                <button class="Section-button--banner"><a href="#contact">Contáctenos</a></button>
+            </div>
+            <div class="Section-div-sectionDividerDown">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" opacity="0.33"
+                        d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
+                    </path>
+                    <path class="elementor-shape-fill" opacity="0.66"
+                        d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
+                    </path>
+                    <path class="elementor-shape-fill"
+                        d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
+                    </path>
+                </svg>
+            </div>
+        </section>
+
+        <section class="Section" id="services">
+
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Servicios</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content Content">
+
+                    <div class="Content-div--container">
+                        <div class="Content-div--content">
+                            <div class="Content-div--iconContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-cup-hot-fill"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z" />
+                                    <path
+                                        d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z" />
+                                </svg>
+                            </div>
+
+                            <h3 class="Content-h3">Alimentación</h3>
+                            <p class="Content-p">Minuta y menú dados por una Nutricionista</p>
+                        </div>
+                        <div class="Content-div--content">
+                            <div class="Content-div--iconContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bus-front-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1v2ZM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4Zm-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1Z" />
+                                </svg>
+                            </div>
+                            <h3 class="Content-h3">Transporte</h3>
+                            <p class="Content-p">Seguro y confiable.</p>
+                        </div>
+                        <div class="Content-div--content">
+                            <div class="Content-div--iconContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-palette-fill"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                </svg>
+                            </div>
+                            <h3 class="Content-h3">Formación Extendida</h3>
+                            <p class="Content-p">Contamos con un horario extendido de formación </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="Section" id="ourGarten">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Nuestro Jardín</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content">
+                    <div class="Section-div--ourGarten">
+                        <img src="./img/OurGarten/quienesSomos.png" alt="Quienes Somos" class="Section-img--ourGarten">
+                        <h3 class="Section-h3--ourGarten">¿Quiénes somos?</h3>
+                        <div class="Section-div--pcontent">
+                            <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del
+                                desarrollo y del aprendizaje, es un lugar de oportunidad para que los niños y niñas de
+                                primera infancia reciban la atención y orientación en sus procesos comunicativos,
+                                cognitivos, sociales, artísticos y corporales de manera adecuada, afectiva, lúdica y
+                                personalizada.</p>
+                            <button id="whoWeAre" class="Section-button--ourGarten">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="Section-div--ourGarten">
+                        <img src="./img/OurGarten/mision.png" alt="Misión" class="Section-img--ourGarten">
+                        <h3 class="Section-h3--ourGarten">Misión</h3>
+                        <div class="Section-div--pcontent">
+                            <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del
+                                desarrollo y del aprendizaje, está comprometido con el desarrollo de los niños y las
+                                niñas en sus dimensiones, teniendo en cuenta las características individuales;
+                                fundamentando la labor en la lúdica y el acercamiento afectivo como pilares en la
+                                realización de todas las actividades y empleando aulas especializadas que favorecen
+                                ambientes de aprendizaje.</p>
+                            <button id="mision" class="Section-button--ourGarten">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="Section-div--ourGarten">
+                        <img src="./img/OurGarten/vision.png" alt="Visión" class="Section-img--ourGarten">
+                        <h3 class="Section-h3--ourGarten">Visión</h3>
+                        <div class="Section-div--pcontent">
+                            <p class="Section-p--ourGarten">El Jardín Infantil Barquito de papel, la travesía del
+                                desarrollo y del aprendizaje, será reconocido como una institución educativa que
+                                potencia en los niños y niñas destrezas, habilidades y favorece procesos cognitivos,
+                                sociales, artísticos, corporales y comunicativos en español e inglés en ambientes de
+                                aprendizaje afectivos y lúdicos, pertinentes para su desarrollo.</p>
+                            <button id="vision" class="Section-button--ourGarten">Ver más</button>
+                        </div>
+                    </div>
+                    <div class="Section-div--ourGarten">
+                        <img src="./img/OurGarten/espacios.png" alt="Ambientes de Aprendizaje"
+                            class="Section-img--ourGarten">
+                        <h3 class="Section-h3--ourGarten">Ambientes de Aprendizaje</h3>
+                        <div class="Section-div--pcontent">
+                            <p class="Section-p--ourGarten">El desarrollo humano es la integración de conocimientos, de
+                                maneras de ser, de sentir, de actuar, que se suscitan al interactuar consigo mismo, con
+                                sus padres, con sus pares, docentes y con los objetos del medio como producto de la
+                                experiencia vivida. Como ser humano, el niño se desarrolla como totalidad, tanto su
+                                organismo biológicamente organizado, como sus potencialidades de aprendizaje y
+                                desenvolvimiento funcionan en un sistema compuesto de múltiples dimensiones: corporal,
+                                cognitiva, comunicativa y personal social. El funcionamiento particular de cada una,
+                                determina el desarrollo y actividad posible del niño en sus distintas etapas. Desde un
+                                punto de vista integral, la evolución del niño se realiza en varias dimensiones y
+                                procesos a la vez, estos desarrollos no son independientes sino complementarios. En
+                                nuestro jardín favorecemos estos desarrollos en ambientes de aprendizaje en las
+                                diferentes aulas enfocadas a cada dimensión.</p>
+                                
+                            <button id="learningEnviroment" class="Section-button--ourGarten">Ver más</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Modal!!-->
+                <div class="Section-div--lightbox">
+                    <button class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
+                    </button>
+                    <div class="modalOurGartenInfo"></div>
+                </div>
+
+
+            </div>
+        </section>
+        <section class="Section" id="groups">
+            <!-- <div class="Section-div-sectionDividerUp">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path>
+                    <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path>
+                    <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path>
+                    </svg>
+                </div> -->
+            <div class="Section-div--container">
+
+                <div class="Section-div--content">
+                    <div class="Section-div--groups">
+                        <figure class="Section-figure--groups">
+                            <img src="./img/Groups/Aventureros.jpg" alt="Aventureros" class="Section-img--groups">
+                        </figure>
+                        <div class="Section-div--textContainer">
+                            <p class="Section-p--groups">Dos años</p>
+                            <h3 class="Section-h3--groups">AVENTUREROS</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="Section-div--groups">
+                        <figure class="Section-figure--groups">
+                            <img src="./img/Groups/Artistas.jpg" alt="Artistas" class="Section-img--groups">
+                        </figure>
+                        <div class="Section-div--textContainer">
+                            <p class="Section-p--groups">Tres años</p>
+                            <h3 class="Section-h3--groups">ARTISTAS</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="Section-div--groups">
+                        <figure class="Section-figure--groups">
+                            <img src="./img/Groups/Creativos.jpg" alt="Creativos" class="Section-img--groups">
+                        </figure>
+                        <div class="Section-div--textContainer">
+                            <p class="Section-p--groups">Cuatro años</p>
+                            <h3 class="Section-h3--groups">CREATIVOS</h3>
+                        </div>
+                    </div>
+
+                    <div class="Section-div--groups">
+                        <figure class="Section-figure--groups">
+                            <img src="./img/Groups/Innovadores.jpg" alt="Innovadores" class="Section-img--groups">
+                        </figure>
+                        <div class="Section-div--textContainer">
+                            <p class="Section-p--groups">Cinco años</p>
+                            <h3 class="Section-h3--groups">INNOVADORES</h3>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section class="Section" id="humanTalent">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Talento Humano</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content Content">
+
+                    <div class="Content-div--container">
+                        <figure class="Content-figure">
+                            <img src="./img/Teacher2.jpg" alt="Maria Gomez" class="Content-img">
+                            <div class="Content-div--info">
+                                <h3 class="Content-h3">Maria Gomez</h3>
+                                <p class="Content-p">AVENTUREROS</p>
+                            </div>
+                        </figure>
+                        <figure class="Content-figure">
+                            <img src="./img/Teacher1.jpg" alt="Ana Vargas" class="Content-img">
+                            <div class="Content-div--info">
+                                <h3 class="Content-h3">Ana Vargas</h3>
+                                <p class="Content-p">ARTISTAS</p>
+                            </div>
+                        </figure>
+                        <figure class="Content-figure">
+                            <img src="./img/Teacher4.jpg" alt="Sofía Alvarez" class="Content-img">
+                            <div class="Content-div--info">
+                                <h3 class="Content-h3">Sofía Alvarez</h3>
+                                <p class="Content-p">CREATIVOS</p>
+                            </div>
+                        </figure>
+                        <figure class="Content-figure">
+                            <img src="./img/Teacher3.jpg" alt="Gloria Fernández" class="Content-img">
+                            <div class="Content-div--info">
+                                <h3 class="Content-h3">Gloria Fernández</h3>
+                                <p class="Content-p">INNOVADORES</p>
+                            </div>
+                        </figure>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="Section" id="partners">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Convenios</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia culpa modi quaerat ipsa.
+                        Ducimus odit dolorem commodi qui perspiciatis quas, voluptates hic placeat, laboriosam quae
+                        nihil error. Maxime, perspiciatis sequi!</p>
+
+                </div>
+            </div>
+        </section>
+        <section class="Section" id="accreditation">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Acreditación</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia culpa modi quaerat ipsa.
+                        Ducimus odit dolorem commodi qui perspiciatis quas, voluptates hic placeat, laboriosam quae
+                        nihil error. Maxime, perspiciatis sequi!</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="Section" id="gallery">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Galería</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content">
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/Artistas1.jpg" alt="Artistas">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/Aventureros1.jpg" alt="Aventureros">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/Creativos1.jpg" alt="Creativos">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/Innovadores1.jpg" alt="Innovadores">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/Garten.jpg" alt="Jardín">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/transport.jpg" alt="Transporte">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/beach.jpg" alt="Playa Barquito de Papel">
+                    </figure>
+                    <figure class="Section-figure--gallery">
+                        <img src="./img/Gallery/dance.jpg" alt="Baile Barquito de Papel">
+                    </figure>
+
+                </div>
+                <div class="Section-div--lightbox">
+                    <button class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
+                    </button>
+                    <img class="bigImage" alt="Galería">
+                </div>
+            </div>
+        </section>
+
+        <section class="Section" id="contact">
+            <div class="Section-div--container">
+                <div class="Section-div--title">
+                    <h2 class="Section-h2">Contáctenos</h2>
+                    <div class="Section-div--bar">
+                        <svg width="226" height="17" viewBox="0 0 226 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M113.123 1L108.955 7.3548L94 6.04002L99.6387 14.367C101.232 16.2754 102.704 16.3451 105.032 14.367C105.277 16.3392 108.202 16.4641 110.426 13.9287C110.916 16.5583 113.97 16.7417 116.31 14.1479C116.8 16.5583 120.211 16.3398 122.194 13.9287C122.194 15.6818 124.906 16.0782 126.116 15.0244C127.327 13.9706 132 9.54611 132 9.54611L118.271 8.66959L113.123 1Z"
+                                fill="currentColor" stroke="currentColor" stroke-opacity="0.01" />
+                            <path
+                                d="M1 12.6216C15.4 12.2939 19.4 10.8739 23.8 10C23.8 10 25 11.9662 27.4 12.6216C29.8 13.277 35.8 12.9493 39.4 12.6216C43 12.2939 52.6 10 52.6 10C52.6 10 55 11.9662 57.4 12.6216C59.8 13.277 63.4 12.9493 69.4 12.6216C75.4 12.2939 80.2 10 80.2 10C80.2 10 81.4 12.2939 83.8 12.6216C86.2 12.9493 91 12.6216 91 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                            <path
+                                d="M135 12.6216C149.4 12.2939 153.4 10.8739 157.8 10C157.8 10 159 11.9662 161.4 12.6216C163.8 13.277 169.8 12.9493 173.4 12.6216C177 12.2939 186.6 10 186.6 10C186.6 10 189 11.9662 191.4 12.6216C193.8 13.277 197.4 12.9493 203.4 12.6216C209.4 12.2939 214.2 10 214.2 10C214.2 10 215.4 12.2939 217.8 12.6216C220.2 12.9493 225 12.6216 225 12.6216"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="Section-div--content">
+                    <!-- <form class="Section-form" method="post" action="" onsubmit="return validateForm()"> -->
+
+                    <form class="Section-form" >
+                        <label for="name">
+                            <span>Nombre:</span>
+                            <input type="text" name="name" id="name" autocomplete="name"
+                                title="Nombre sólo acepta letras, espacios en blanco y máximo 45 caracteres"
+                                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,45}$" required>
+                        </label>
+                        <label for="email">
+                            <span>Correo Electrónico:</span>
+                            <input type="email" name="email" id="email" autocomplete="email" required>
+                        </label>
+                        <label for="phone">
+                            <span>Número Telefónico:</span>
+                            <input type="tel" name="phone" id="phone" autocomplete="tel"
+                                title="Este campo sólo acepta números" pattern="^[0-9]{1,20}$" required>
+                        </label>
+                        <label for="message">
+                            <span>Mensaje:</span>
+                            <textarea name="message" id="message" autocomplete="off" required></textarea>
+
+                        </label>
+                        <div class="Section-div--captchaContainer">
+                            <div class="g-recaptcha" data-sitekey="6LdSurAmAAAAAD1ShfmSmyUzI4uHQQqIijBa2mzo"></div>
+                            <p class="Section-p--captcha"> Llena el código reCAPTCHA</p>
+                            <div class="div-Section--loader none">
+                                <img src="./img/tail-spin.svg" alt="Cargando">
+                            </div>
+                            <div class="Section-div--submitFormOK">
+                                <p>Gracias por contactarnos, su mensaje fue enviado satisfactoriamente.</p>
+                            </div>
+                        </div>
+
+                        <input class="Form-input--submit" name="submitBtn" type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="Footer">
+        <div class="Footer-div">
+            <div class="Footer-div--container Section-div--container">
+                <div class="Footer-div--info Section-div--content">
+                    <div class="Footer-div--textInfo">
+                        <h4 class="Footer-h4">ATENCIÓN PARA INFORMACIÓN</h4>
+                        <p class="Footer-p">Los sábados de 9:00a.m. a 2:00p.m.</p>
+                        <p class="Footer-p">Con cita previa.</p>
+                        <h5 class="Footer-h5">MAYOR INFORMACIÓN</h4>
+                            <p class="Footer-p">Celular: 391 1323 4567</p>
+                            <!-- <p class="Footer-p">Teléfono: (601) 659 7602</p> -->
+                            <p class="Footer-p">Correo Electrónico: <a class="Footer-a--mail"
+                                    href="http://address@correo.com" target="_blank">address@correo.com</a>
+                            </p>
+                    </div>
+                    <div class="Footer-div--social">
+                        <a href="#" class="Footer-a--social" target="_blank">
+                            <svg class="Footer-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="Footer-a--social" target="_blank">
+                            <svg class="Footer-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="Footer-a--social" target="_blank">
+                            <svg class="Footer-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="Footer-a--social">
+                            <svg class="Footer-svg--social" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="Footer-div--map Section-div--content">
+                    <h4 class="Footer-h4">UBICACIÓN</h4>
+                    <p class="Footer-p">Cra 123, N° 45-67, Colombia</p>
+                    <div id="googleMap"></div>
+                </div>
+            </div>
+        </div>
+        <div class="Footer-div--copyrigth">
+            <p class="Footer-p--termsConditions">
+                <a class="Footer-a--termsConditions">Términos, Condiciones & Políticas de
+                    Privacidad</a>
+            </p>
+            <p class="Footer-p--copyright"><small>&copy; Copyright 2025 - Jardín Infantil Barquito de Papel</small></p>
+
+        </div>
+        <!-- TermsConditions Modal-->
+            <div class="Section-div--lightbox">
+                <button class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg>
+                </button>
+                <div class="modalTerms"></div>
+            </div>
+        <!--FIN TermsConditions Modal-->
+    </footer>
+
+
+    <li class="Li"><a class="Li-a--scrollTop">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+        </a></li>
+
+    <!-- Scripts -->
+    <script src="./js/jardinBarquito.js"></script>
+    <!-- Icons font awesome-->
+    <!-- Google Maps -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfIeL5pi2G_CsF21w0FFZrmO4sEEl8So8&callback=myMap"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</body>
+
+</html>

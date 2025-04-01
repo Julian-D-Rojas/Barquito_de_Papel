@@ -1,0 +1,1185 @@
+@import "./reset";
+@import "./media_queries";
+
+@font-face {
+  font-family: Kristen ITC;
+  src: url(../fonts/kristen-itc.ttf);
+}
+@font-face {
+  font-family: Montserrat Regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+//COLORS
+
+$primary: #26a8ff;
+$secondary: #ff6a00;
+$gallery: #ed6503;
+$textShadow: #363535;
+$white: #f0f8ff;
+$inputBorder: #dedede;
+$backgroundIcon: #f3f3f3;
+$primary-70: #0c3653;
+$primary-80: #0a2538;
+$primary-90: #1a252f;
+$scrollTopButton: #11aae677;
+$scrollTopButtonHover: #11aae6a8;
+$aquaTitle: #2084a1;
+$pinkTitle: #bd186a;
+$link: #fede9b;
+$boxShadow: rgba(128, 116, 118, 0.5);
+$grayLayer: #c5c5c59f;
+$lightGrayLayer: rgb(207, 207, 207);
+$backgroundGallery: #e0e0e0;
+
+$liChild1: #feba9b;
+$liChild2: #fef49b;
+$liChild3: #c8fe9b;
+$liChild4: #9bfee5;
+$liChild5: #9bc6fe;
+$liChild6: #c19bfe;
+$liChild7: #fe9be5;
+$liChild8: #fe9b9b;
+
+html {
+  font-size: 6.25%;
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: Montserrat Regular, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 17rem;
+  font-weight: 500;
+}
+
+a {
+  font-weight: 500;
+}
+
+.Header {
+  & {
+    position: relative;
+  }
+
+  &-div--container {
+    background-color: $primary;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transition: all 0.3s ease;
+    z-index: 10;
+
+    @include menu {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      position: fixed;
+      box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &-div--container.isActive {
+  }
+
+  &-div--menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10rem;
+    box-shadow: 2rem 2rem 10rem rgba(0, 0, 0, 0.1);
+    @include menu {
+      box-shadow: none;
+    }
+  }
+
+  &-div-nav {
+  }
+
+  &-img {
+    max-width: 180rem;
+  }
+
+  &-a {
+    font-family: Kristen ITC;
+    font-weight: 900;
+    font-size: 20rem;
+    text-align: center;
+    color: $secondary;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    cursor: pointer;
+  }
+
+  &-a--menu {
+  }
+
+  &-button {
+    width: 50rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    padding: 10rem;
+    cursor: pointer;
+    @include menu {
+      display: none;
+    }
+  }
+
+  &-button:hover {
+    animation: rotate 1.5s alternate;
+  }
+
+  &-svg {
+    fill: $white;
+  }
+
+  &-svg--ship {
+    display: block;
+  }
+
+  &-svg--x {
+    display: none;
+  }
+
+  &-svg--ship.isActive {
+    display: none;
+  }
+
+  &-svg--x.isActive {
+    display: block;
+  }
+
+  &-nav {
+    margin-top: 40rem;
+    @include menu {
+      display: flex;
+      align-items: center;
+      margin: 0;
+    }
+  }
+  &-ul {
+    @include menu {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &-li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    font-size: 17rem;
+    font-weight: 600;
+    @include menu {
+      border-bottom: none;
+    }
+  }
+  &-li a {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 60px;
+    @include menu {
+      padding: 0px 15rem;
+    }
+  }
+  &-li:hover {
+    background-color: #0000001a;
+    transition: 0.7s;
+  }
+  &-li:nth-child(1) {
+    color: $liChild1;
+  }
+
+  &-li:nth-child(2) {
+    color: $liChild2;
+  }
+
+  &-li:nth-child(3) {
+    color: $liChild3;
+  }
+
+  &-li:nth-child(4) {
+    color: $liChild4;
+  }
+
+  &-li:nth-child(5) {
+    color: $liChild5;
+    display: none;
+  }
+
+  &-li:nth-child(6) {
+    color: $liChild6;
+    display: none;
+  }
+
+  &-li:nth-child(7) {
+    color: $liChild7;
+  }
+
+  &-li:nth-child(8) {
+    color: $liChild8;
+  }
+
+  &-a--nav {
+    text-shadow: rgb(54, 53, 53) 0.1em 0.1em 0.2em;
+  }
+
+  &-div--social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50rem;
+    padding-bottom: 20rem;
+    @include menu {
+      display: none;
+    }
+  }
+
+  &-svg--social {
+    color: rgb(240, 248, 255);
+    padding: 10rem;
+    width: 45rem;
+    border-radius: 10rem;
+  }
+  &-svg--social:hover {
+    fill: $primary;
+    background-color: $white;
+    transition: 0.3s;
+  }
+}
+
+.Section {
+  display: flex;
+  justify-content: center;
+  min-height: 300rem;
+  @include menu {
+    &[id] {
+      scroll-margin-top: 80rem;
+    }
+  }
+  &--banner {
+    height: auto;
+    background: rgba(3, 3, 3, 0.137) url(../img/shipImage.jpg);
+    background-blend-mode: overlay;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    @include menu {
+      height: auto;
+    }
+  }
+  &--banner .Section-div-sectionDividerDown {
+    transform: rotate(180deg);
+    // top: Js alto banner - 59rem
+    overflow: hidden;
+    //position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    color: $white;
+    @include menu {
+      bottom: -1px;
+    }
+  }
+  &--banner .Section-div-sectionDividerDown svg {
+    height: 60rem;
+    overflow: hidden;
+    display: block;
+    width: calc(100% + 1.3rem);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  // &--banner .Section-div-sectionDividerUp {
+
+  //   top: 29vh;
+  //   overflow: hidden;
+  //   position: absolute;
+  //   left: 0;
+  //   width: 100%;
+  //   line-height: 0;
+  //   direction: ltr;
+  //   color: $white;
+  //   @include menu {
+  //     top: -1px;
+  //   }
+  //}
+
+  &-h2--banner {
+    padding-top: 70rem;
+    @include menu {
+      display: none;
+    }
+  }
+  &-p--banner {
+    color: $white;
+    font-weight: 700;
+    font-size: large;
+    padding-bottom: 90rem;
+    text-shadow: $textShadow 0.1em 0.1em 0.9em;
+    @include tablet {
+      padding-bottom: 30rem;
+    }
+    @include laptop {
+      padding-bottom: 30rem;
+    }
+  }
+  &-span--banner {
+    font-size: 39rem;
+    font-family: Poppins;
+    font-weight: 100;
+  }
+  // &-button--banner:hover {
+  // }
+  &-button--banner a {
+    background-color: $secondary;
+    font-size: 20rem;
+    color: $white;
+    font-weight: 900;
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: 15rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $secondary;
+  }
+
+  &-button--banner a:hover {
+    background-color: $white;
+    color: $secondary;
+    transition: 0.3s;
+  }
+  &-div--banner {
+    padding: 90rem 0 20rem 0;
+    position: relative;
+    z-index: 6;
+
+    @include tablet {
+      text-align: start;
+      padding: 90rem 0rem 90rem 70rem;
+    }
+    @include laptop {
+      text-align: start;
+      padding: 90rem 0rem 90rem 100rem;
+    }
+    @include menu {
+      text-align: start;
+      padding-left: 130rem;
+      padding-top: 400rem;
+    }
+  }
+  &-div--container {
+    padding: 25rem 0rem 45rem 0rem;
+    @include mobile {
+      max-width: 540rem;
+    }
+    @include tablet {
+      max-width: 720rem;
+    }
+    @include laptop {
+      max-width: 960rem;
+    }
+  }
+  &-div--content {
+    font-size: 20rem;
+    padding: 0rem 15rem;
+  }
+
+  &-div--content input,
+  #message {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $inputBorder;
+    width: 100%;
+    padding: 5rem 10rem;
+    margin: 5rem 0rem;
+    color: #0a2538;
+    box-shadow: 0 0 3rem 0 $boxShadow;
+    border-radius: 10rem;
+  }
+  &-div--content #message {
+    height: 130rem;
+    resize: none;
+  }
+  &-div--captchaContainer {
+    margin: 5rem 0rem;
+    min-height: 100rem;
+  }
+  &-p--captcha {
+    color: rgb(221, 17, 17);
+    font-weight: 900;
+    font-size: 14rem;
+    display: none;
+  }
+
+  &-p--captcha.isActive {
+    display: block;
+  }
+
+  &-div--content .Form-input--submit {
+    margin: 10rem 0rem;
+    background-color: $primary-70;
+    color: $white;
+    font-weight: 900;
+    border-radius: 10rem;
+    border-width: 2px;
+    border-color: $primary-70;
+  }
+  &-div--content .Form-input--submit:hover {
+    background-color: $white;
+    color: $primary-70;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  &-div--submitFormOK {
+    display: none;
+    
+  }
+  &-div--submitFormOK p{
+    font-weight: 600;
+    text-align: center;
+  }
+  &-div--submitFormOK.isActive {
+    display: block;
+  }
+  &-form.isActive {
+    display: none;
+  }
+
+  &-div--title {
+    text-align: center;
+    padding: 20rem;
+  }
+  &-div--title h2 {
+    font-size: 32rem;
+    font-weight: 800;
+    font-family: Poppins;
+  }
+}
+#services {
+  color: $primary-70;
+  background-color: $white;
+  & .Content-div--container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+  & .Content-div--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rem;
+    @include tablet {
+      width: 33%;
+    }
+    @include laptop {
+      width: 33%;
+    }
+  }
+  & .Content-div--content h3 {
+    font-weight: 500;
+    font-size: 20rem;
+    color: #0a2538;
+    font-family: Poppins;
+    padding: 13rem 0;
+    text-align: center;
+  }
+  & .Content-div--content svg {
+    width: 50rem;
+  }
+
+  & .Content-div--content p {
+    text-align: center;
+    font-size: 14rem;
+  }
+  & .Content-div--iconContainer {
+    padding: 25rem;
+    background-color: $inputBorder;
+    border-radius: 50%;
+    display: inline-block;
+    align-content: center;
+    align-items: center;
+  }
+}
+#accreditation {
+  color: $primary-70;
+  display: none;
+}
+#partners {
+  background-image: url(../img/background\ 1.jpg);
+  background-repeat: repeat;
+  color: $white;
+  display: none;
+}
+#ourGarten {
+  color: $white;
+  background: rgba(3, 3, 3, 0.336) url(../img/ourGarten.jpg);
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-size: cover;
+  & .Section-div--content {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 24rem;
+    padding: 0rem 24rem;
+    @include tablet {
+      grid-template-columns: auto auto;
+    }
+    @include laptop {
+      grid-template-columns: auto auto;
+    }
+  }
+  & .Section-div--ourGarten {
+    display: flex;
+    flex-direction: column;
+    background-color: #303030a8;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .Section-img--ourGarten {
+    width: 150rem;
+    padding-top: 15rem;
+  }
+  & .Section-h3--ourGarten {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22rem;
+    color: $secondary;
+    font-family: Poppins;
+    padding: 10rem 0;
+  }
+  & .Section-button--ourGarten {
+    position: absolute;
+    bottom: 15rem;
+    width: 110rem;
+    font-size: 17rem;
+    color: $white;
+    font-weight: 600;
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: 3rem;
+    border-style: solid;
+    border-width: 1px;
+  }
+  & .Section-button--ourGarten:hover {
+    border-color: $secondary;
+    color: $secondary;
+  }
+  & .Section-p--ourGarten {
+    position: relative;
+    padding: 0rem 20rem 0rem 20rem;
+    height: 130rem;
+    clip-path: polygon(0 0, 100% 0, 100% 130rem, 0 130rem);
+  }
+  & .Section-p--ourGarten::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 95%; /* Ajusta el valor para ocultar más o menos contenido */
+    //background: linear-gradient(transparent, #303030); /* Sombra que oculta el contenido */
+    background: linear-gradient(0deg, #303030 25%, rgba(253, 187, 45, 0) 100%);
+  }
+  & .Section-div--pcontent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 12;
+  }
+  & .Section-div--lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+  & .Section-div--lightbox .ourGartenInfo {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+
+  & .modalOurGartenInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & .bigText {
+    padding: 0 24rem;
+    max-width: 500rem;
+  }
+}
+#humanTalent {
+  & {
+    color: $aquaTitle;
+    background: $lightGrayLayer url(../img/trianglesBackground.png);
+    background-blend-mode: overlay;
+    background-size: cover;
+    @include tablet {
+      background: $grayLayer url(../img/trianglesBackground.png);
+      min-height: 100vh;
+      align-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @include laptop {
+      background: $grayLayer url(../img/trianglesBackground.png);
+      min-height: 100vh;
+      align-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  & .Section-div--container {
+    border-radius: 10rem;
+    @include tablet {
+      background: $grayLayer;
+      box-shadow: 0 0 10rem 0 $boxShadow;
+    }
+    @include laptop {
+      background: $grayLayer;
+      box-shadow: 0 0 10rem 0 $boxShadow;
+    }
+  }
+  & .Content-div--container {
+    margin: 10rem;
+    @include tablet {
+      display: flex;
+    }
+    @include laptop {
+      display: flex;
+    }
+  }
+  & .Content-figure:nth-child(1) {
+    color: $aquaTitle;
+  }
+  & .Content-figure:nth-child(2) {
+    color: $pinkTitle;
+  }
+  & .Content-figure:nth-child(3) {
+    color: $aquaTitle;
+  }
+  & .Content-figure:nth-child(4) {
+    color: $pinkTitle;
+  }
+  & .Content-figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20rem 0rem;
+    border-radius: 15rem;
+    background-color: $white;
+    box-shadow: 0 0 10px 0 $boxShadow;
+    margin-bottom: 20rem;
+    @include tablet {
+      margin: 10rem;
+    }
+    @include laptop {
+      margin: 10rem;
+    }
+  }
+  & .Content-div--info {
+    text-align: center;
+    padding: 10rem 0rem;
+  }
+
+  & .Content-h3 {
+    font-weight: 500;
+    font-size: 22rem;
+    color: $primary-80;
+    font-family: Poppins;
+  }
+  & .Content-p {
+    font-weight: 700;
+    font-size: 12rem;
+  }
+}
+#groups {
+  & .Section-div--container {
+    padding: 0;
+    max-width: 100%;
+
+    & .Section-div--textContainer {
+      text-align: center;
+      padding: 50rem 8rem;
+      @include tablet {
+        width: 50%;
+      }
+      @include laptop {
+        width: 50%;
+      }
+      @include gallery {
+        width: 50%;
+      }
+    }
+    & h3 {
+      font-size: 36rem;
+      font-family: emojis;
+      color: $primary-70;
+      font-weight: 700;
+    }
+    & p {
+      font-size: 20rem;
+      color: $pinkTitle;
+      font-family: emojis;
+    }
+  }
+  & .Section-div--content {
+    padding: 0;
+    line-height: normal;
+    @include gallery {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 50% 50%;
+    }
+  }
+  & .Section-figure--groups {
+    @include tablet {
+      width: 50%;
+    }
+    @include laptop {
+      width: 50%;
+    }
+    @include gallery {
+      width: 50%;
+    }
+  }
+  & .Section-div--groups {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @include laptop {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @include gallery {
+      flex-direction: row;
+    }
+  }
+  & .Section-div--groups:nth-child(odd) {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @include laptop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  & .Section-div--groups:nth-child(3) {
+    @include gallery {
+      flex-direction: row-reverse;
+    }
+  }
+  & .Section-div--groups:nth-child(4) {
+    @include gallery {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+#gallery {
+  background-color: $backgroundGallery;
+
+  color: $gallery;
+
+  & .Section-div--content {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 24rem;
+    padding: 0rem 24rem;
+    @include tablet {
+      grid-template-columns: auto auto;
+    }
+    @include laptop {
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+  & .Section-div--container {
+    @include tablet {
+      max-width: none;
+    }
+    @include laptop {
+      max-width: none;
+    }
+  }
+
+  & .Section-div--content img {
+    
+    box-shadow: 15rem 15rem 30rem #bababa, -15rem -15rem 30rem #ffffff;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    @include tablet {cursor: pointer;
+      pointer-events: auto;
+    }
+    @include laptop {cursor: pointer;
+      pointer-events: auto;
+    }
+  }
+  & .Section-div--content img:hover {
+    @include tablet {transform: scale(0.95)}
+    @include laptop {transform: scale(0.95)}
+    
+  }
+  & .Section-div--content img:active {
+    transform: scale(1.03);
+  }
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 11;
+  }
+  & .Section-div--lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+  & .Section-div--lightbox .bigImage {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+}
+#contact {
+  background-image: url(../img/background\ 4.jpg);
+  background-repeat: repeat;
+  color: $primary-70;
+
+  & .div-Section--loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & .div-Section--loader img {
+    width: 70rem;
+  }
+  & .Section-p--captcha {
+    padding: 0 11rem;
+  }
+  & .none {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.Li {
+  &-a--scrollTop {
+    opacity: 1;
+    transition: all 0.5s ease;
+    position: fixed;
+    height: 50rem;
+    width: 50rem;
+    background-color: $scrollTopButton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    z-index: 9;
+    border-radius: 10px;
+    right: 30px;
+    bottom: 40px;
+  }
+  &-a--scrollTop:hover {
+    transition: all 0.5s ease;
+    background-color: $scrollTopButtonHover;
+  }
+  &-a--scrollTop svg {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+.scrollBar{
+  max-height: 330px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: darkgray lightgray;
+}
+.Footer {
+  & {
+    background-color: $primary-80;
+  }
+  & .bigText {
+    padding: 0 24rem;
+    max-width: 500rem;
+  }
+  & .Section-h3--ourGarten {
+    text-align: center;
+    font-weight: 500;
+    font-size: 22rem;
+    color: $secondary;
+    font-family: Poppins;
+    padding: 10rem 0;
+  }
+  &-h4 {
+    font-size: 23rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &-h5 {
+    padding-top: 20rem;
+    font-size: 18rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &-p {
+    text-align: center;
+  }
+
+  &-a--mail {
+    color: $link;
+  }
+
+  &-div--container {
+    display: flex;
+    flex-direction: column;
+    padding: 25rem 0;
+
+    @include laptop {
+      flex-direction: row;
+    }
+  }
+
+  &-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // &-div--info {
+  // }
+
+  &-div--social {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-svg--social {
+    fill: $white;
+    width: 45rem;
+    padding: 10rem;
+    border-radius: 10rem;
+    transition: 0.3s;
+  }
+  &-svg--social:hover {
+    fill: $primary-80;
+    background-color: $white;
+  }
+
+  // &-div--map {
+  // }
+
+  &-div--map #googleMap {
+    min-height: 400rem;
+    @include tablet {
+      width: 650rem;
+    }
+    @include laptop {
+      width: 540rem;
+    }
+  }
+  &-h4 {
+    padding: 20rem 0 10rem 0;
+  }
+
+  &-div--copyrigth {
+    padding: 24rem 24rem;
+    background-color: $primary-90;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-p--copyright {
+    text-align: center;
+    font-size: 14rem;
+  }
+  &-p--termsConditions {
+    text-align: center;
+    font-size: 12rem;
+    cursor: pointer;
+  }
+  & .Section-div--lightbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10rem);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    z-index: 12;
+  }
+  & .Section-div--lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+  & .Section-div--lightbox .ourGartenInfo {
+    width: 90%;
+    max-width: 900rem;
+    //height: 70vh;
+    background-color: #26a8ff;
+    box-shadow: 0 0 15rem 0 rgba(0, 0, 0, 0.4);
+  }
+  & .Section-div--lightbox .close {
+    width: 30rem;
+    cursor: pointer;
+    color: $white;
+    transition: all 0.5s ease;
+  }
+  & .Section-div--lightbox .close:hover {
+    transform: scale(0.95);
+  }
+  & .Section-div--lightbox .close:active {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+
+  60% {
+    transform: rotate(15deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
