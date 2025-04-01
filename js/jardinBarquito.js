@@ -250,8 +250,7 @@ function submitForm($form, $captcha, $loader) {
             // body: new FormData(e.target)
           }
           let res = await fetch(
-            //"https://formsubmit.co/ajax/a2a4b631f9b37b21712f4cb550b90cf6",
-            'https://formsubmit.co/ajax/51711207bb7d3c1dabfaa48f9f7b5b4d',
+            'https://formsubmit.co/ajax/julian.d.rojas16@gmail.com',
             options
           )
           json = await res.json()
